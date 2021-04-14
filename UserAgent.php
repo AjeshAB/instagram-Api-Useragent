@@ -147,22 +147,22 @@ class UserAgent
     }
 
 
-    public function getAndroidVersion(): string
+    public function getAndroidVersion()
     {
         return $this->_androidVersion;
     }
 
-    public function getAndroidRelease(): string
+    public function getAndroidRelease()
     {
         return $this->_androidRelease;
     }
 
-    public function getDPI(): string
+    public function getDPI()
     {
         return $this->_dpi;
     }
 
-    public function getResolution(): string
+    public function getResolution()
     {
         return $this->_resolution;
     }
@@ -172,28 +172,28 @@ class UserAgent
         return $this->_manufacturer;
     }
 
-    public function getBrand(): string
+    public function getBrand()
     {
         return $this->_brand;
     }
 
-    public function getModel(): string
+    public function getModel()
     {
         return $this->_model;
     }
 
 
-    public function getDevice(): string
+    public function getDevice()
     {
         return $this->_device;
     }
 
-    public function getCPU(): string
+    public function getCPU()
     {
         return $this->_cpu;
     }
 
-    public static function buildUserAgent($device): string
+    public static function buildUserAgent($device)
     {
         // Build the appropriate "Manufacturer" or "Manufacturer/Brand" string.
         $manufacturerWithBrand = $device->getManufacturer();
@@ -218,7 +218,7 @@ class UserAgent
         );
     }
 
-    public static function getRandomGoodDevice(): string
+    public static function getRandomGoodDevice()
     {
         $randomIdx = array_rand(self::DEVICES, 1);
 
